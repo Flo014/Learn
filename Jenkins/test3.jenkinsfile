@@ -1,0 +1,13 @@
+stage('Print hello world!') {
+    println("hello world!")
+}
+stage('Sleep') {
+    sleep(10)
+}
+
+stage('Answer') {
+    println("AAAAA! Who said that??!!!")
+}
+stage('Shoked'){
+    sleep(5)
+}
