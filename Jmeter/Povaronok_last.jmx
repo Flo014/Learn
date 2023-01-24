@@ -558,6 +558,8 @@
         <stringProp name="filename">${pBaseDir}${pResultFilePath}</stringProp>
       </ResultCollector>
       <hashTree/>
+      <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Generate Summary Results" enabled="true"/>
+      <hashTree/>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
