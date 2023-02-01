@@ -1,8 +1,8 @@
-date_create	
-date_create_asc	
-rating	
-comments	
-favor	
+date_create
+date_create_asc
+rating
+comments
+favor
 view
-video	
+video
 step
