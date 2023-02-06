@@ -28,8 +28,47 @@
               <stringProp name="Argument.desc">default: ${__P(test.thinkTimeUpper, 8000)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="QUsers" elementType="Argument">
+              <stringProp name="Argument.name">QUsers</stringProp>
+              <stringProp name="Argument.value">${__P(QUsers, 1)}</stringProp>
+              <stringProp name="Argument.desc">default:1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TimeCapacity" elementType="Argument">
+              <stringProp name="Argument.name">TimeCapacity</stringProp>
+              <stringProp name="Argument.value">${__P(TimeCapacity, 60)}</stringProp>
+              <stringProp name="Argument.desc">время нагрузки</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TimeGrow" elementType="Argument">
+              <stringProp name="Argument.name">TimeGrow</stringProp>
+              <stringProp name="Argument.value">${__P(TimeGrow, 0)}</stringProp>
+              <stringProp name="Argument.desc">время роста нагрузки</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TimeFall" elementType="Argument">
+              <stringProp name="Argument.name">TimeFall</stringProp>
+              <stringProp name="Argument.value">${__P(TimeFall, 0)}</stringProp>
+              <stringProp name="Argument.desc">время снижения нагрузки</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TestName" elementType="Argument">
+              <stringProp name="Argument.name">TestName</stringProp>
+              <stringProp name="Argument.value">${__P(TestName, &apos;manual run&apos;)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="BuildN" elementType="Argument">
+              <stringProp name="Argument.name">BuildN</stringProp>
+              <stringProp name="Argument.value">${__P(BuildN, 0)}</stringProp>
+              <stringProp name="Argument.desc">номер билда</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="es.test.mode" elementType="Argument">
+              <stringProp name="Argument.name">es.test.mode</stringProp>
+              <stringProp name="Argument.value">${__P(esLogLevel, info)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
-          <stringProp name="TestPlan.comments">Без понятия, что тут будет. Но это какие-то глобальные переменные</stringProp>
         </Arguments>
         <hashTree/>
         <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Input / Output Files" enabled="true">
@@ -60,12 +99,12 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-440151774">
-            <stringProp name="49">1</stringProp>
+          <collectionProp name="-642356125">
+            <stringProp name="389614191">${QUsers}</stringProp>
             <stringProp name="0">0</stringProp>
-            <stringProp name="48">0</stringProp>
-            <stringProp name="1722">60</stringProp>
-            <stringProp name="48">0</stringProp>
+            <stringProp name="-943650586">${TimeGrow}</stringProp>
+            <stringProp name="1405036319">${TimeCapacity}</stringProp>
+            <stringProp name="-945083778">${TimeFall}</stringProp>
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
@@ -189,7 +228,7 @@
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="${nameT}" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Run: Open Page" enabled="true">
@@ -254,7 +293,7 @@
           <hashTree>
             <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="${nameT}" enabled="true">
               <boolProp name="TransactionController.includeTimers">false</boolProp>
-              <boolProp name="TransactionController.parent">true</boolProp>
+              <boolProp name="TransactionController.parent">false</boolProp>
             </TransactionController>
             <hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${nameT}: Search ${rec}" enabled="true">
@@ -314,7 +353,7 @@
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="${nameT}" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Run: Open Page" enabled="true">
@@ -374,7 +413,7 @@
           <hashTree>
             <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="${nameT}" enabled="true">
               <boolProp name="TransactionController.includeTimers">false</boolProp>
-              <boolProp name="TransactionController.parent">true</boolProp>
+              <boolProp name="TransactionController.parent">false</boolProp>
             </TransactionController>
             <hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${nameT}: Sort by ${sort}" enabled="true">
@@ -454,7 +493,7 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -604,7 +643,7 @@
       <hashTree/>
       <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Generate Summary Results" enabled="true"/>
       <hashTree/>
-      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="false">
         <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="es.scheme" elementType="Argument">
