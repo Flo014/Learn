@@ -63,9 +63,9 @@
               <stringProp name="Argument.desc">номер билда</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="es.test.mode" elementType="Argument">
-              <stringProp name="Argument.name">es.test.mode</stringProp>
-              <stringProp name="Argument.value">${__P(esLogLevel, info)}</stringProp>
+            <elementProp name="esTestLog" elementType="Argument">
+              <stringProp name="Argument.name">esTestLog</stringProp>
+              <stringProp name="Argument.value">${__P(esTestLog, info)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -693,7 +693,7 @@
             </elementProp>
             <elementProp name="es.test.mode" elementType="Argument">
               <stringProp name="Argument.name">es.test.mode</stringProp>
-              <stringProp name="Argument.value">info</stringProp>
+              <stringProp name="Argument.value">${esTestLog}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="es.xpack.user" elementType="Argument">
@@ -744,6 +744,16 @@
             <elementProp name="es.ssl.keystore.pw" elementType="Argument">
               <stringProp name="Argument.name">es.ssl.keystore.pw</stringProp>
               <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="test.name" elementType="Argument">
+              <stringProp name="Argument.name">test.name</stringProp>
+              <stringProp name="Argument.value">${TestName}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="build.number" elementType="Argument">
+              <stringProp name="Argument.name">build.number</stringProp>
+              <stringProp name="Argument.value">${BuildN}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
